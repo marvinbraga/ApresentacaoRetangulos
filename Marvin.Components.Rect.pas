@@ -108,7 +108,7 @@ end;
 procedure TRectagleMessage.Remover;
 begin
   { executa a animação de saída }
-  TAnimator.AnimateFloat(Self, 'Opacity', 0, 1.5, TAnimationType.InOut,
+  TAnimator.AnimateFloatWait(Self, 'Opacity', 0, 0.5, TAnimationType.InOut,
     TInterpolationType.Circular);
   { chama o evento para exclusão da lista }
   if Assigned(FOnDeleteItem) then
